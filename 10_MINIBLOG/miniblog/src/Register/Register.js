@@ -1,6 +1,12 @@
 import styles from "./Register.module.css";
 
 const Register = () => {
+  const [displayName, setDisplayName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [error, setError] = useState("");
+
   return (
     <div>
       <h1>Registre-se para postar</h1>
