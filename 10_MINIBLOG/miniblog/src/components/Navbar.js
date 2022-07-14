@@ -1,10 +1,16 @@
 import { NavLink } from "react-router-dom";
 
+import { useAuthentication } from "../hooks/useAuthetication";
+
+import { useAuthValue } from "../context/AuthContext";
+
 import styles from "./Navbar.module.css";
 
 import React from "react";
 
 const Navbar = () => {
+  const { user } = useAuthValue();
+
   return (
     <nav className={styles.navbar}>
       <NavLink to="/" className={styles.brand}>
